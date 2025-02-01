@@ -10,7 +10,7 @@ class RequestsCenter extends StatelessWidget {
     return Container(
       width: mqWidth(context, 75) - sidebarWidth * 2,
       height: mqHeigth(context, 100) - topbarHeight,
-      color: Colors.grey[300],
+      color: blackBackgroundColor,
       child: const Center(
         child: Text('Main Content'),
       ),

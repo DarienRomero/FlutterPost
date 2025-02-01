@@ -10,7 +10,15 @@ class RightSettingsBar extends StatelessWidget {
     return Container(
       width: sidebarWidth,
       height: mqHeigth(context, 100) - topbarHeight,
-      color: Colors.blue,
+      decoration: BoxDecoration(
+        color: lightBackgroundColor,
+        border: Border(
+          left: BorderSide(
+            color: Colors.grey.withOpacity(0.5),
+            width: 1
+          ),
+        )
+      ),
     );
   }
 }

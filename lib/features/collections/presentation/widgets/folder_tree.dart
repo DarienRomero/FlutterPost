@@ -10,7 +10,15 @@ class FolderTree extends StatelessWidget {
     return Container(
       width: mqWidth(context, 25),
       height: mqHeigth(context, 100) - topbarHeight,
-      color: Colors.blue[300],
+      decoration: BoxDecoration(
+        color: lightBackgroundColor,
+        border: Border(
+          right: BorderSide(
+            color: Colors.grey.withOpacity(0.5),
+            width: 1
+          ),
+        )
+      ),
       child: const Center(
         child: Text('Main Content'),
       ),

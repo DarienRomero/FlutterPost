@@ -10,7 +10,15 @@ class TopSettingsBar extends StatelessWidget {
     return Container(
       width: mqWidth(context, 100),
       height: topbarHeight,
-      color: Colors.red,
+      decoration: BoxDecoration(
+        color: lightBackgroundColor,
+        border: Border(
+          bottom: BorderSide(
+            color: Colors.grey.withOpacity(0.5),
+            width: 1
+          ),
+        )
+      ),
       child: const SafeArea(
         child: Column(
           children: [
