@@ -10,7 +10,7 @@ class LeftSettingsBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: sidebarWidth,
+      width: sidebarLeftWidth,
       height: mqHeigth(context, 100) - topbarHeight,
       decoration: BoxDecoration(
         color: lightBackgroundColor,

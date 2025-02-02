@@ -8,7 +8,7 @@ class RequestsCenter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: mqWidth(context, 75) - sidebarWidth * 2,
+      width: mqWidth(context, 75) - sidebarLeftWidth - sidebarRightWidth,
       height: mqHeigth(context, 100) - topbarHeight,
       color: blackBackgroundColor,
       child: const Center(

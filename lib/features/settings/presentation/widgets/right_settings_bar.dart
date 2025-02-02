@@ -8,7 +8,7 @@ class RightSettingsBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: sidebarWidth,
+      width: sidebarRightWidth,
       height: mqHeigth(context, 100) - topbarHeight,
       decoration: BoxDecoration(
         color: lightBackgroundColor,
