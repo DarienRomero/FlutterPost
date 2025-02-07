@@ -18,7 +18,7 @@ class GeneralImage extends StatelessWidget {
   final bool fadeInEnabled;
 
   const GeneralImage({
-    Key? key,
+    super.key,
     this.width,
     this.height,
     required this.url,
@@ -31,7 +31,7 @@ class GeneralImage extends StatelessWidget {
     this.file,
     this.alignment = Alignment.center,
     this.fadeInEnabled = true
-  }): super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

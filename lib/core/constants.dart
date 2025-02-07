@@ -9,3 +9,6 @@ const double sidebarRightWidth = 70;
 
 const Color lightBackgroundColor = Color(0xff1D1D1D);
 const Color blackBackgroundColor = Color(0xff191919);
+
+const double buttonHeigth = 50;
+const double inputHeigth = 50;

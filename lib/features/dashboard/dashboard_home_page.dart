@@ -13,22 +13,24 @@ class DashboardHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const TopSettingsBar(),
-          SizedBox(
-            width: mqWidth(context, 100),
-            height: mqHeigth(context, 100) - topbarHeight,
-            child: const Row(
-              children: [
-                LeftSettingsBar(),
-                FolderTree(),
-                RequestsCenter(),
-                RightSettingsBar(),
-              ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const TopSettingsBar(),
+            SizedBox(
+              width: mqWidth(context, 100),
+              height: mqHeigth(context, 100) - topbarHeight,
+              child: const Row(
+                children: [
+                  LeftSettingsBar(),
+                  FolderTree(),
+                  RequestsCenter(),
+                  RightSettingsBar(),
+                ],
+              )
             )
-          )
-        ],
+          ],
+        ),
       )
     );
   }
