@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_code_editor/flutter_code_editor.dart';
 import 'package:flutter_post/features/common/presentation/widgets/custom_radio_button.dart';
 import 'package:flutter_post/features/common/presentation/widgets/h_fixed_spacing.dart';
+import 'package:highlight/languages/json.dart';
+import 'package:json_editor/json_editor.dart';
 
 class RequestsTabBar extends StatefulWidget {
   const RequestsTabBar({super.key});
@@ -11,6 +14,10 @@ class RequestsTabBar extends StatefulWidget {
 
 class _RequestsTabBarState extends State<RequestsTabBar> with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  final _controller = CodeController(
+    text: '{\n  "name": "Flutter",\n  "version": "3.13.0"\n}', // JSON inicial
+    language: json,
+  );
 
   @override
   void initState() {
@@ -96,6 +103,35 @@ class _RequestsTabBarState extends State<RequestsTabBar> with SingleTickerProvid
                           onChanged: (value) {},
                         ),
                       ],
+                    ),
+                    /* SizedBox(
+                      height: 200,
+                      child: CodeField(
+                        controller: _controller,
+                        textStyle: const TextStyle(fontFamily: 'monospace', fontSize: 16),
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ), */
+                    Container(
+                      height: 200,
+                      child: JsonEditor.string(
+                        jsonString: '''
+                            {
+                                // This is a comment
+                                "name": "young chan",
+                                "number": 100,
+                                "boo": true,
+                                "user": {"age": 20, "tall": 1.8},
+                                "cities": ["beijing", "shanghai", "shenzhen"]
+                            }
+                        ''',
+                        onValueChanged: (value) {
+                            print(value);
+                        },
+                    ),          
                     )
                   ],
                 ),
